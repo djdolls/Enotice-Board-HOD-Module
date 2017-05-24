@@ -1,14 +1,37 @@
 'use strict';
-
 // Declare app level module which depends on views, and components
-angular.module('myApp', [
-  'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.version'
-]).
-config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.hashPrefix('!');
+angular.module('EnoticeBoardWebApp', [
+  'ngRoute'
+  , 'EnoticeBoardWebApp.home'
+  , 'EnoticeBoardWebApp.welcome'
+  , 'EnoticeBoardWebApp.pending'
+  , 'EnoticeBoardWebApp.profile'
+  , 'EnoticeBoardWebApp.viewuser'
+  , 'EnoticeBoardWebApp.addtext'
+  , 'EnoticeBoardWebApp.temp'
+  , 'EnoticeBoardWebApp.loader'
+  , 'EnoticeBoardWebApp.dashboard'
+  , 'EnoticeBoardWebApp.register'
+  , 'EnoticeBoardWebApp.blank'
+  , 'EnoticeBoardWebApp.newpost'
+  , 'EnoticeBoardWebApp.uploadpic'
+  , 'EnoticeBoardWebApp.viewdocument'
+  , 'EnoticeBoardWebApp.principal'
+  , 'EnoticeBoardWebApp.otherdepartment'
+  , 'EnoticeBoardWebApp.othertext'
+  , 'EnoticeBoardWebApp.otherpdf'
+  , 'EnoticeBoardWebApp.editprofile'
+  , 'EnoticeBoardWebApp.pdf'
+  , 'EnoticeBoardWebApp.report'
+  , 'EnoticeBoardWebApp.archive'
+  , 'EnoticeBoardWebApp.forgetpassword'
+  , 'EnoticeBoardWebApp.newdocument'
 
-  $routeProvider.otherwise({redirectTo: '/view1'});
+
+
+]).
+config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
+    $routeProvider.otherwise({
+        redirectTo: '/home'
+    });
 }]);
